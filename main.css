@@ -1,0 +1,54 @@
+body{
+    background-color: #4b4f74;
+}
+.container {
+    display:flex;
+}
+#stats {
+    width: 14%;
+    height:600px;
+    display:flex;
+    align-items: center;
+    padding: 5px;
+}
+#charSelection {
+    width: 43%;
+    height:600px;
+    text-align: center;
+    padding: 5px;
+}
+#statsNumbers {
+    margin-left: auto;
+    margin-right: 5px;
+}
+#itemSelection {
+    width: 43%;
+    height:600px;
+    text-align: center;
+    padding: 5px;
+}
+.item {
+    margin: auto;
+    padding: 2px;
+    filter:grayscale();
+}
+.itemSelected {
+    margin: auto;
+    padding: 2px;
+}
+.itemEvolve {
+    margin: auto;
+    padding: 2px;
+    filter:sepia(100%)
+}
+.char {
+    margin: auto;
+    padding: 2px;
+    filter:grayscale();
+    width: 150px;
+}
+.charSelected {
+    margin: auto;
+    padding: 2px;
+    width: 150px;
+}
