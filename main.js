@@ -109,13 +109,13 @@ function getCurrentState() {
         state.selectedItems.push(si.itmName)
     })
     state.fullyLeveled = useFullyLeveled
-    navigator.clipboard.writeText(`https://ctrpetersen.github.io/vsbp/?state=${JSON.stringify(state)}`);
+    navigator.clipboard.writeText(`https://ctrpetersen.github.io/vsbp/?state=${btoa(JSON.stringify(state))}`);
     console.log(JSON.stringify(state))
 }
 
 function loadState() {
     if (getParameterByName('state')){
-        const loadedState = JSON.parse(getParameterByName('state'))
+        const loadedState = JSON.parse(atob(getParameterByName('state')))
         if (loadedState.selectedChar) selectChar(loadedState.selectedChar)
         if (loadedState.fullyLeveled) useFullyLeveled = loadedState.fullyLeveled
         if (loadedState.selectedItems){
