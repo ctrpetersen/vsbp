@@ -1,5 +1,7 @@
 body{
     background-color: #4b4f74;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 110%;
 }
 .container {
     display:flex;
@@ -8,13 +10,13 @@ body{
     width: 14%;
     height:600px;
     display:flex;
-    align-items: center;
     padding: 5px;
 }
 #charSelection {
     width: 43%;
     height:600px;
     text-align: center;
+    overflow: auto;
     padding: 5px;
 }
 #statsNumbers {
@@ -25,30 +27,42 @@ body{
     width: 43%;
     height:600px;
     text-align: center;
+    max-height: 700px;
+    overflow: auto;
     padding: 5px;
+}
+#selectedWeapons{
+    width: 100%;
+    height:78px;
+    padding: 2px;
+}
+#selectedAccessories{
+    width: 100%;
+    height:78px;
+    padding: 2px;
 }
 .item {
     margin: auto;
     padding: 2px;
+}
+[obj-state='unselected']{
     filter:grayscale();
 }
-.itemSelected {
-    margin: auto;
-    padding: 2px;
+[obj-highlight='evolve']{
+    background-color: red;
+    filter: grayscale(50%);
 }
-.itemEvolve {
-    margin: auto;
-    padding: 2px;
-    filter:sepia(100%)
+[obj-highlight='base']{
+    background-color: rgb(137, 218, 255);
+    filter: grayscale(70%);
 }
 .char {
     margin: auto;
     padding: 2px;
-    filter:grayscale();
     width: 150px;
 }
-.charSelected {
-    margin: auto;
-    padding: 2px;
-    width: 150px;
+button{
+    background-color: #8d91b4;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 100%;
 }
